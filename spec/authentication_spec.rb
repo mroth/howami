@@ -3,10 +3,6 @@ include Howami
 
 describe Authentication do
 
-  it "should be true" do
-    true.should be_true
-  end
-
   describe ".new" do
     it "should be instantiated with any args" do
       lambda { Authentication.new() }.should_not raise_error

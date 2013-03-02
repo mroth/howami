@@ -1,6 +1,5 @@
 require "methadone"
 require "fitgem"
-# require "credentials"
 
 module Howami
   class Authentication
@@ -17,7 +16,7 @@ module Howami
 
     def do_interactive_auth
       fetch_request_token!
-      
+
       auth_url = "http://www.fitbit.com/oauth/authorize?oauth_token=#{@request_token.token}"
       puts "Go to #{auth_url} and then enter the verifier code below and hit Enter"
       verifier = gets.chomp
