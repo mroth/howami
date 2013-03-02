@@ -25,12 +25,13 @@ module Howami
     end
 
     def self.get_credentials
+      return nil if not self.has_stored_credentials?
       YAML.load_file(CREDENTIALS_STORE)
     end
 
     protected
     def self.has_stored_credentials?
-      FileUtils.exist? CREDENTIALS_STORE
+      File.exist? CREDENTIALS_STORE
     end
 
   end

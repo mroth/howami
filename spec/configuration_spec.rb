@@ -1,8 +1,16 @@
 require 'spec_helper'
-require "fakefs"
+require 'fakefs/safe'
 include Howami
 
 describe Configuration do
+
+  before(:each) do
+    FakeFS.activate!
+  end
+  after(:each) do
+    FakeFS::FileSystem.clear
+    FakeFS::deactivate!
+  end
 
   describe ".has_valid_credentials?" do
     it "should return false when no tokens are stored"
@@ -11,8 +19,16 @@ describe Configuration do
   end
 
   describe ".get_credentials" do
-    it "should return the credentials"
-    it "should throw an exception if credentials are not stored"
+    it "should return the credentials" do
+      Configuration.store_credentials( 'aaa', 'bbb' )
+      Configuration.get_credentials().should_not be(nil)
+    end
+    it "should not throw an exception if no credentials are stored in fs" do
+      lambda { Configuration.get_credentials() }.should_not raise_error(Errno::ENOENT)
+    end
+    it "should return nil if no credentials are stored in fs" do
+      Configuration.get_credentials().should be(nil)
+    end
   end
 
   describe ".store_credentials" do
