@@ -1,0 +1,4 @@
+module Howami
+  CONSUMER_KEY    = 'b116074974f44c12934d472fde4aac69'
+  CONSUMER_SECRET = 'f62a08f63b954b4bbd0f0de235f27edd'
+end

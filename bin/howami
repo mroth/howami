@@ -12,9 +12,15 @@ class App
     # your program code here
     # You can access CLI options via
     # the options Hash
+    if options[:auth]
+      Howami::Authentication.new.do_interactive_auth
+    end
   end
 
   # supplemental methods here
+  # def do_auth
+  #   Howami::Authentication.new.do_interactive_auth
+  # end
 
   # Declare command-line interface here
 
@@ -26,6 +32,7 @@ class App
   #
   # Specify switches via:
   # on("--[no-]switch","Some switch")
+  on("--auth","Authenticate howami to the Fitbit API")
   #
   # Or, just call OptionParser methods on opts
   #
