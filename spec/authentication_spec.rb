@@ -10,4 +10,9 @@ describe Authentication do
     end
   end
 
+  describe ".authenticated_client" do
+    it "should return a working fitgem client ready for action"
+    it "should throw an error if proper credentials arent stored"
+  end
+
 end

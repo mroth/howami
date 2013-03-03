@@ -13,6 +13,8 @@ Feature: My bootstrapped app kinda works
       |--auth|
     And the banner should document that this app takes no arguments
 
+  Scenario: graceful error message when not configured
+
   Scenario: Manually configuring the app
     When I run `howami --auth`
     Then the output should contain "Go to http://www.fitbit.com/oauth/authorize"

@@ -7,14 +7,24 @@ require 'howami.rb'
 class App
   include Methadone::Main
   include Methadone::CLILogging
+  include Howami
 
   main do # Add args you want: |like,so|
     # your program code here
     # You can access CLI options via
     # the options Hash
-    if options[:auth]
-      Howami::Authentication.new.do_interactive_auth
+    unless Configuration.has_valid_credentials?
+      fatal "You need to authenticate first, please run `howami --auth`"
+      exit 1
     end
+
+    if options[:auth]
+      Authentication.new.do_interactive_auth
+    else
+      fit = Fitbit.new
+      puts fit.weight_str
+    end
+
   end
 
   # supplemental methods here
