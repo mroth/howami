@@ -23,9 +23,10 @@ module Howami
       debug "Parsed user verifier as: #{verifier}"
 
       access_token = self.get_access_token_with_verifier(verifier)
-      # puts "Verifier was: "+verifier
-      puts "Token is:    "+access_token.token
-      puts "Secret is:   "+access_token.secret
+      debug "Received user token is:    "+access_token.token
+      debug "Received user secret is:   "+access_token.secret
+
+      Configuration.store_credentials(access_token.token, access_token.secret)
     end
 
     def get_access_token_with_verifier(verifier)
