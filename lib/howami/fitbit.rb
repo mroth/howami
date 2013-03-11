@@ -11,8 +11,8 @@ module Howami
 
     def retrieve_values!
       @weights = @client.data_by_time_range('/body/log/weight', {:base_date => Date.today.to_s, :period => '1w'})['weight']
-      @fats = @client.data_by_time_range('/body/log/fat', {:base_date => Date.today.to_s, :period => '1w'})['fat']
-      @sleeps = @client.sleep_on_date('today')
+      @fats    = @client.data_by_time_range('/body/log/fat', {:base_date => Date.today.to_s, :period => '1w'})['fat']
+      @sleeps  = @client.sleep_on_date('today')
     end
 
     def weight_str
