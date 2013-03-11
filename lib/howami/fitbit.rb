@@ -23,5 +23,13 @@ module Howami
       end
     end
 
+    def fat_str
+      if @fats.last
+        return "Body fat:\t#{@fats.last['fat']} %"
+      else
+        return "* No body fat data recorded in past 7 days."
+      end
+    end
+
   end
 end

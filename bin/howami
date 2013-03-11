@@ -23,6 +23,7 @@ class App
       end
       fit = Fitbit.new
       puts fit.weight_str
+      puts fit.fat_str
     end
 
   end

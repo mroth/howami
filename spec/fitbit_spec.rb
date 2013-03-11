@@ -27,7 +27,15 @@ describe Fitbit do
       end
       it "adds an indicator if measurement is more than 24hrs old"
     end
-    describe "#fat_str"
+    describe "#fat_str" do
+      it "returns a nicely formatted string with the current body fat" do
+        @fb.fat_str.should match(/Body fat:\t\d\d\.\d\d %/)
+      end
+      it "returns a nice error message if there is no body fat measurement from past week" do
+        @fb.instance_variable_set("@fats",[])
+        @fb.fat_str.should match(/No body fat data recorded in past 7 days./)
+      end
+    end
     describe "#sleep_str"
   end
 
