@@ -13,14 +13,14 @@ class App
     # your program code here
     # You can access CLI options via
     # the options Hash
-    unless Configuration.has_valid_credentials?
-      fatal "You need to authenticate first, please run `howami --auth`"
-      exit 1
-    end
 
     if options[:auth]
       Authentication.new.do_interactive_auth
     else
+      unless Configuration.has_valid_credentials?
+        fatal "You need to authenticate first, please run `howami --auth`"
+        exit 1
+      end
       fit = Fitbit.new
       puts fit.weight_str
     end
