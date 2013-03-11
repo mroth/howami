@@ -14,6 +14,9 @@ Feature: My bootstrapped app kinda works
     And the banner should document that this app takes no arguments
 
   Scenario: graceful error message when not configured
+    When I run `howami --auth`
+    Then the output should contain "You need to authenticate first"
+    And the exit status should be 1
 
   Scenario: Manually configuring the app
     When I run `howami --auth`

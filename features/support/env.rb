@@ -9,8 +9,12 @@ Before do
   @puts = true
   @original_rubylib = ENV['RUBYLIB']
   ENV['RUBYLIB'] = LIB_DIR + File::PATH_SEPARATOR + ENV['RUBYLIB'].to_s
+
+  @original_home = ENV['HOME']
+  ENV['HOME'] = File.expand_path( current_dir )
 end
 
 After do
   ENV['RUBYLIB'] = @original_rubylib
+  ENV['HOME'] = @original_home
 end
