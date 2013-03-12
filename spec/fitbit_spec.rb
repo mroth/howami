@@ -1,9 +1,8 @@
 require 'spec_helper'
 include Howami
 
-describe Fitbit do
-  
-  use_vcr_cassette "fitbit"
+describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes } do
+  #use a vcr cassette so we can assume a full populated and authenticated user record
 
   describe ".new" do
     it "should be instantiated without any args" do
