@@ -14,13 +14,10 @@ describe Authentication do
   describe ".authenticated_client" do
     # it "should return a working fitgem client ready for action" √
     it "should throw an error if proper credentials arent stored" do
-      FakeFS.activate!
-      wipe_credentials!
-
-      lambda { Authentication.authenticated_client }.should raise_error
-
-      FakeFS::FileSystem.clear
-      FakeFS::deactivate!
+      FakeFS do
+        wipe_credentials!
+        lambda { Authentication.authenticated_client }.should raise_error
+      end
     end
   end
 
