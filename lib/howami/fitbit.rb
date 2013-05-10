@@ -31,5 +31,12 @@ module Howami
       end
     end
 
+    def sleep_str
+      sleep_total_min = @sleeps['summary']['totalMinutesAsleep'].to_i
+      sleep_hours = sleep_total_min / 60
+      sleep_remainder_min = sleep_total_min % 60
+      return "#{sleep_hours} hours, #{sleep_remainder_min} min."
+    end
+
   end
 end
