@@ -12,8 +12,10 @@ But what if you want to keep track of _how_ you are?
     Activity level: 2765 steps thus far today
     Sleep last night: 5 hours, 41 min.
 
-
 `howami` uses the Fitbit API to give you a quick CLI glance at your vital stats as synchronized from your nerdy quantified-self tracking devices.
+
+[![Build Status](https://travis-ci.org/mroth/howami.png?branch=master)](https://travis-ci.org/mroth/howami)
+[![Dependency Status](https://gemnasium.com/mroth/howami.png)](https://gemnasium.com/mroth/howami)
 
 ## Installation
 
