@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Howami::VERSION
   gem.authors       = ["Matthew Rothenberg"]
   gem.email         = ["mrothenberg@gmail.com"]
-  gem.description   = %q{CLI tool to show a summary of FitBit health statistics.}
-  gem.summary       = %q{CLI tool to show a summary of FitBit health statistics.}
+  gem.description   = %q{CLI tool to show a summary of Fitbit health statistics.}
+  gem.summary       = %q{CLI tool to show a summary of Fitbit health statistics.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
