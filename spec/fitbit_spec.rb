@@ -8,6 +8,7 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit" } do
   # generate an invalid configuration and let us rely upon the VCR cassettes
   # we don't use fakefs with this because it seems to screw up VCR
   before(:all) do
+    FAKED_CONFIG_LOL = false
     if !File.exist? Howami::Configuration::CREDENTIALS_STORE
       Configuration.store_credentials( 'abc', 'xyz' )
       FAKED_CONFIG_LOL = true
