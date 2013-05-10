@@ -1,29 +1,31 @@
 # Howami
 
-TODO: Write a gem description
+All unix people know the `whoami` command.
+
+    $ whoami
+    mroth
+
+But what if you want to keep track of _how_ you are?
+
+    $ howami
+    Current weight: 161.4lbs (-4% past 30 days)*
+    Activity level: 2765 steps thus far today
+    Sleep last night: 6 hours, 14 minutes
+
+howami uses the Fitbit API to give you a quick CLI glance at your vital stats as synchronized from your nerdy quantified-self tracking devices.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'howami'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Just install it via rubygems:
 
     $ gem install howami
+
+Done.
 
 ## Usage
 
 TODO: Write usage instructions here
 
-## Contributing
+## What devices?
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Since people keep asking, I personally use a Fitbit Aria scale to weigh myself, and a Fitbit Flex for activity/sleep tracking.  <small>(And I've lost 22lbs. at time of writing this!)</small>
