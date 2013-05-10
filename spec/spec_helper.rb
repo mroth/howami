@@ -17,3 +17,8 @@ VCR.configure do |c|
     interaction.request.headers['Authorization'].first
   end
 end
+
+def wipe_credentials!
+  cred_store = Howami::Configuration::CREDENTIALS_STORE
+  FileUtils.rm cred_store if File.exist? cred_store
+end

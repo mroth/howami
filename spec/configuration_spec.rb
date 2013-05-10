@@ -13,7 +13,10 @@ describe Configuration do
   end
 
   describe ".has_valid_credentials?" do
-    it "should return false when no tokens are stored"
+    it "should return false when no tokens are stored" do
+      wipe_credentials!
+      Configuration.has_valid_credentials?.should be_false
+    end
     it "should return false if tokens are invalid"
     it "should return true if stored tokens are valid"
   end
@@ -44,6 +47,12 @@ describe Configuration do
     it "should persist the credentials in a way that they match upon retrieval" do
       Configuration.store_credentials( 'aaa', 'bbb' )
       Configuration.get_credentials()[:user_token].should eq 'aaa'
+      Configuration.get_credentials()[:user_secret].should eq 'bbb'
+    end
+    it "should overwrite credentials if stored a second time" do
+      Configuration.store_credentials( 'aaa', 'aaa' )
+      Configuration.store_credentials( 'bbb', 'bbb' )
+      Configuration.get_credentials()[:user_token].should eq 'bbb'
       Configuration.get_credentials()[:user_secret].should eq 'bbb'
     end
   end
