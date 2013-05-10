@@ -18,14 +18,14 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency('rdoc')
-  gem.add_development_dependency('aruba', '~> 0.5.1')
+  gem.add_development_dependency('aruba', '~> 0.5.2')
   gem.add_development_dependency('rake', '~> 10.0.3')
   gem.add_development_dependency('rspec', '~> 2.13.0')
   gem.add_development_dependency('fakefs')
   gem.add_development_dependency('vcr', '~> 2.4.0')
   gem.add_development_dependency('webmock', '~> 1.9.3')
 
-  gem.add_dependency('methadone', '~> 1.2.5')
+  gem.add_dependency('methadone', '~> 1.2.6')
   gem.add_dependency('fitgem', '~> 0.6.1')
   gem.add_dependency('colored')
 end
