@@ -29,6 +29,6 @@ Do `howami --auth` to complete login via the Fitbit API.  At any point after tha
 
 ## What devices?
 
-Since people keep asking, I personally use a Fitbit Aria scale to weigh myself, and a Fitbit Flex for activity/sleep tracking.
+Since people keep asking, I personally use a [Fitbit Aria](http://www.fitbit.com/aria) scale to weigh myself, and a [Fitbit Flex](http://www.fitbit.com/flex) for activity/sleep tracking.
 
 <sub>(And I've lost 22lbs. at time of writing this!)</sub>
