@@ -1,0 +1,229 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/-/body/log/weight/date/2013-05-10/1w.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.6.1 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - <OAUTH_AUTH_HEADER>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=5908CBD729C81753C9D9824971D28B92.fitbit1; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '728'
+      Date:
+      - Fri, 10 May 2013 14:59:45 GMT
+    body:
+      encoding: UTF-8
+      string: '{"weight":[{"bmi":22.01,"date":"2013-05-03","logId":1367578013000,"time":"10:46:53","weight":140.56},{"bmi":21.91,"date":"2013-05-04","logId":1367659147000,"time":"09:19:07","weight":139.9},{"bmi":22.1,"date":"2013-05-05","logId":1367743206000,"time":"08:40:06","weight":141.11},{"bmi":21.81,"date":"2013-05-06","logId":1367829101000,"time":"08:31:41","weight":139.28},{"bmi":21.89,"date":"2013-05-07","logId":1367913082000,"time":"07:51:22","weight":139.79},{"bmi":21.93,"date":"2013-05-08","logId":1368003855000,"time":"09:04:15","weight":140.08},{"bmi":21.84,"date":"2013-05-09","logId":1368089755000,"time":"08:55:55","weight":139.5},{"bmi":21.73,"date":"2013-05-10","logId":1368170956000,"time":"07:29:16","weight":138.8}]}'
+    http_version: 
+  recorded_at: Fri, 10 May 2013 14:59:46 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/-/body/log/fat/date/2013-05-10/1w.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.6.1 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - <OAUTH_AUTH_HEADER>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=6B48DC79806B3131CC24091D8BD4F499.fitbit1; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '600'
+      Date:
+      - Fri, 10 May 2013 14:59:44 GMT
+    body:
+      encoding: UTF-8
+      string: '{"fat":[{"date":"2013-05-03","fat":13.39,"logId":1367578013000,"time":"10:46:53"},{"date":"2013-05-04","fat":12.5,"logId":1367659147000,"time":"09:19:07"},{"date":"2013-05-05","fat":13.37,"logId":1367743206000,"time":"08:40:06"},{"date":"2013-05-06","fat":13.15,"logId":1367829101000,"time":"08:31:41"},{"date":"2013-05-07","fat":12.81,"logId":1367913082000,"time":"07:51:22"},{"date":"2013-05-08","fat":12.95,"logId":1368003855000,"time":"09:04:15"},{"date":"2013-05-09","fat":12.94,"logId":1368089755000,"time":"08:55:55"},{"date":"2013-05-10","fat":12.97,"logId":1368170956000,"time":"07:29:16"}]}'
+    http_version: 
+  recorded_at: Fri, 10 May 2013 14:59:46 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/-/sleep/date/2013-05-10.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.6.1 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - <OAUTH_AUTH_HEADER>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=D3FEACFED7A7120A8CA8A284EF9918C1.fitbit1; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '6999'
+      Date:
+      - Fri, 10 May 2013 14:59:44 GMT
+    body:
+      encoding: UTF-8
+      string: '{"sleep":[{"awakeningsCount":7,"duration":11100000,"efficiency":91,"isMainSleep":true,"logId":35846905,"minuteData":[{"dateTime":"03:50:00","value":"3"},{"dateTime":"03:51:00","value":"3"},{"dateTime":"03:52:00","value":"3"},{"dateTime":"03:53:00","value":"3"},{"dateTime":"03:54:00","value":"3"},{"dateTime":"03:55:00","value":"3"},{"dateTime":"03:56:00","value":"2"},{"dateTime":"03:57:00","value":"1"},{"dateTime":"03:58:00","value":"1"},{"dateTime":"03:59:00","value":"1"},{"dateTime":"04:00:00","value":"1"},{"dateTime":"04:01:00","value":"1"},{"dateTime":"04:02:00","value":"1"},{"dateTime":"04:03:00","value":"1"},{"dateTime":"04:04:00","value":"1"},{"dateTime":"04:05:00","value":"1"},{"dateTime":"04:06:00","value":"1"},{"dateTime":"04:07:00","value":"1"},{"dateTime":"04:08:00","value":"1"},{"dateTime":"04:09:00","value":"1"},{"dateTime":"04:10:00","value":"1"},{"dateTime":"04:11:00","value":"1"},{"dateTime":"04:12:00","value":"1"},{"dateTime":"04:13:00","value":"1"},{"dateTime":"04:14:00","value":"1"},{"dateTime":"04:15:00","value":"1"},{"dateTime":"04:16:00","value":"1"},{"dateTime":"04:17:00","value":"1"},{"dateTime":"04:18:00","value":"1"},{"dateTime":"04:19:00","value":"1"},{"dateTime":"04:20:00","value":"1"},{"dateTime":"04:21:00","value":"1"},{"dateTime":"04:22:00","value":"1"},{"dateTime":"04:23:00","value":"1"},{"dateTime":"04:24:00","value":"1"},{"dateTime":"04:25:00","value":"1"},{"dateTime":"04:26:00","value":"1"},{"dateTime":"04:27:00","value":"1"},{"dateTime":"04:28:00","value":"1"},{"dateTime":"04:29:00","value":"1"},{"dateTime":"04:30:00","value":"1"},{"dateTime":"04:31:00","value":"1"},{"dateTime":"04:32:00","value":"1"},{"dateTime":"04:33:00","value":"1"},{"dateTime":"04:34:00","value":"1"},{"dateTime":"04:35:00","value":"1"},{"dateTime":"04:36:00","value":"1"},{"dateTime":"04:37:00","value":"1"},{"dateTime":"04:38:00","value":"1"},{"dateTime":"04:39:00","value":"1"},{"dateTime":"04:40:00","value":"1"},{"dateTime":"04:41:00","value":"1"},{"dateTime":"04:42:00","value":"1"},{"dateTime":"04:43:00","value":"1"},{"dateTime":"04:44:00","value":"2"},{"dateTime":"04:45:00","value":"1"},{"dateTime":"04:46:00","value":"1"},{"dateTime":"04:47:00","value":"1"},{"dateTime":"04:48:00","value":"1"},{"dateTime":"04:49:00","value":"1"},{"dateTime":"04:50:00","value":"1"},{"dateTime":"04:51:00","value":"1"},{"dateTime":"04:52:00","value":"1"},{"dateTime":"04:53:00","value":"1"},{"dateTime":"04:54:00","value":"1"},{"dateTime":"04:55:00","value":"1"},{"dateTime":"04:56:00","value":"1"},{"dateTime":"04:57:00","value":"1"},{"dateTime":"04:58:00","value":"1"},{"dateTime":"04:59:00","value":"1"},{"dateTime":"05:00:00","value":"1"},{"dateTime":"05:01:00","value":"1"},{"dateTime":"05:02:00","value":"1"},{"dateTime":"05:03:00","value":"1"},{"dateTime":"05:04:00","value":"1"},{"dateTime":"05:05:00","value":"1"},{"dateTime":"05:06:00","value":"1"},{"dateTime":"05:07:00","value":"1"},{"dateTime":"05:08:00","value":"1"},{"dateTime":"05:09:00","value":"1"},{"dateTime":"05:10:00","value":"1"},{"dateTime":"05:11:00","value":"1"},{"dateTime":"05:12:00","value":"1"},{"dateTime":"05:13:00","value":"1"},{"dateTime":"05:14:00","value":"1"},{"dateTime":"05:15:00","value":"1"},{"dateTime":"05:16:00","value":"1"},{"dateTime":"05:17:00","value":"1"},{"dateTime":"05:18:00","value":"1"},{"dateTime":"05:19:00","value":"1"},{"dateTime":"05:20:00","value":"1"},{"dateTime":"05:21:00","value":"1"},{"dateTime":"05:22:00","value":"1"},{"dateTime":"05:23:00","value":"1"},{"dateTime":"05:24:00","value":"1"},{"dateTime":"05:25:00","value":"1"},{"dateTime":"05:26:00","value":"1"},{"dateTime":"05:27:00","value":"1"},{"dateTime":"05:28:00","value":"1"},{"dateTime":"05:29:00","value":"1"},{"dateTime":"05:30:00","value":"1"},{"dateTime":"05:31:00","value":"1"},{"dateTime":"05:32:00","value":"1"},{"dateTime":"05:33:00","value":"1"},{"dateTime":"05:34:00","value":"1"},{"dateTime":"05:35:00","value":"1"},{"dateTime":"05:36:00","value":"1"},{"dateTime":"05:37:00","value":"1"},{"dateTime":"05:38:00","value":"1"},{"dateTime":"05:39:00","value":"1"},{"dateTime":"05:40:00","value":"1"},{"dateTime":"05:41:00","value":"1"},{"dateTime":"05:42:00","value":"1"},{"dateTime":"05:43:00","value":"1"},{"dateTime":"05:44:00","value":"1"},{"dateTime":"05:45:00","value":"1"},{"dateTime":"05:46:00","value":"1"},{"dateTime":"05:47:00","value":"1"},{"dateTime":"05:48:00","value":"1"},{"dateTime":"05:49:00","value":"1"},{"dateTime":"05:50:00","value":"1"},{"dateTime":"05:51:00","value":"1"},{"dateTime":"05:52:00","value":"1"},{"dateTime":"05:53:00","value":"1"},{"dateTime":"05:54:00","value":"1"},{"dateTime":"05:55:00","value":"1"},{"dateTime":"05:56:00","value":"1"},{"dateTime":"05:57:00","value":"1"},{"dateTime":"05:58:00","value":"1"},{"dateTime":"05:59:00","value":"1"},{"dateTime":"06:00:00","value":"1"},{"dateTime":"06:01:00","value":"1"},{"dateTime":"06:02:00","value":"1"},{"dateTime":"06:03:00","value":"2"},{"dateTime":"06:04:00","value":"2"},{"dateTime":"06:05:00","value":"2"},{"dateTime":"06:06:00","value":"2"},{"dateTime":"06:07:00","value":"2"},{"dateTime":"06:08:00","value":"2"},{"dateTime":"06:09:00","value":"1"},{"dateTime":"06:10:00","value":"2"},{"dateTime":"06:11:00","value":"2"},{"dateTime":"06:12:00","value":"1"},{"dateTime":"06:13:00","value":"1"},{"dateTime":"06:14:00","value":"1"},{"dateTime":"06:15:00","value":"1"},{"dateTime":"06:16:00","value":"1"},{"dateTime":"06:17:00","value":"1"},{"dateTime":"06:18:00","value":"1"},{"dateTime":"06:19:00","value":"1"},{"dateTime":"06:20:00","value":"1"},{"dateTime":"06:21:00","value":"1"},{"dateTime":"06:22:00","value":"1"},{"dateTime":"06:23:00","value":"1"},{"dateTime":"06:24:00","value":"1"},{"dateTime":"06:25:00","value":"1"},{"dateTime":"06:26:00","value":"1"},{"dateTime":"06:27:00","value":"2"},{"dateTime":"06:28:00","value":"1"},{"dateTime":"06:29:00","value":"1"},{"dateTime":"06:30:00","value":"1"},{"dateTime":"06:31:00","value":"2"},{"dateTime":"06:32:00","value":"1"},{"dateTime":"06:33:00","value":"1"},{"dateTime":"06:34:00","value":"1"},{"dateTime":"06:35:00","value":"1"},{"dateTime":"06:36:00","value":"1"},{"dateTime":"06:37:00","value":"1"},{"dateTime":"06:38:00","value":"1"},{"dateTime":"06:39:00","value":"1"},{"dateTime":"06:40:00","value":"1"},{"dateTime":"06:41:00","value":"1"},{"dateTime":"06:42:00","value":"1"},{"dateTime":"06:43:00","value":"1"},{"dateTime":"06:44:00","value":"1"},{"dateTime":"06:45:00","value":"1"},{"dateTime":"06:46:00","value":"2"},{"dateTime":"06:47:00","value":"2"},{"dateTime":"06:48:00","value":"1"},{"dateTime":"06:49:00","value":"1"},{"dateTime":"06:50:00","value":"2"},{"dateTime":"06:51:00","value":"2"},{"dateTime":"06:52:00","value":"2"},{"dateTime":"06:53:00","value":"1"},{"dateTime":"06:54:00","value":"2"}],"minutesAfterWakeup":1,"minutesAsleep":161,"minutesAwake":16,"minutesToFallAsleep":7,"startTime":"2013-05-10T03:50:00.000","timeInBed":185}],"summary":{"totalMinutesAsleep":161,"totalSleepRecords":1,"totalTimeInBed":185}}'
+    http_version: 
+  recorded_at: Fri, 10 May 2013 14:59:46 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/-/profile.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.6.1 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - <OAUTH_AUTH_HEADER>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=1B679215CCC4D720D8F0D2E0908C189C.fitbit1; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '615'
+      Date:
+      - Fri, 10 May 2013 14:59:44 GMT
+    body:
+      encoding: UTF-8
+      string: '{"user":{"avatar":"http://cache.fitbit.com/DA2F8E91-BDC1-5BD1-1209-8AA23C6E2AB3_profile_100_square.jpg","city":"Brooklyn","country":"US","dateOfBirth":"1979-08-04","displayName":"Matthew","distanceUnit":"en_US","encodedId":"24DQFP","foodsLocale":"en_US","fullName":"Matthew
+        Rothenberg","gender":"MALE","glucoseUnit":"en_US","height":67.00787401574803,"heightUnit":"en_US","locale":"en_US","memberSince":"2013-01-17","nickname":"mroth","offsetFromUTCMillis":-14400000,"state":"NY","strideLengthRunning":0,"strideLengthWalking":0,"timezone":"America/New_York","waterUnit":"en_US","weight":138.8,"weightUnit":"en_US"}}'
+    http_version: 
+  recorded_at: Fri, 10 May 2013 14:59:46 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/-/activities/date/2013-05-10.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.6.1 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - <OAUTH_AUTH_HEADER>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=ECEDFFC89CE6BC7B3B89AF82D8DCEF61.fitbit1; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '624'
+      Date:
+      - Fri, 10 May 2013 15:54:14 GMT
+    body:
+      encoding: UTF-8
+      string: '{"activities":[],"goals":{"activeScore":1000,"caloriesOut":2817,"distance":5,"steps":10000},"summary":{"activeScore":207,"activityCalories":277,"caloriesBMR":761,"caloriesOut":986,"distances":[{"activity":"total","distance":0.68},{"activity":"tracker","distance":0.68},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0},{"activity":"moderatelyActive","distance":0.23},{"activity":"lightlyActive","distance":0.44},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":13,"lightlyActiveMinutes":79,"marginalCalories":154,"sedentaryMinutes":437,"steps":1546,"veryActiveMinutes":0}}'
+    http_version: 
+  recorded_at: Fri, 10 May 2013 15:54:17 GMT
+recorded_with: VCR 2.4.0
