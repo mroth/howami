@@ -17,7 +17,7 @@ module Howami
 
     def weight_str
       if @weights.last
-        return "Current weight:\t#{@weights.last['weight']} #{@client.label_for_measurement(:weight)}"
+        return "#{@weights.last['weight']} #{@client.label_for_measurement(:weight)}"
       else
         return "* No weight data recorded in past 7 days."
       end
@@ -25,7 +25,7 @@ module Howami
 
     def fat_str
       if @fats.last
-        return "Body fat:\t#{@fats.last['fat']} %"
+        return "#{@fats.last['fat']} %"
       else
         return "* No body fat data recorded in past 7 days."
       end

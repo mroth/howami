@@ -21,9 +21,8 @@ class App
         fatal "You need to authenticate first, please run `howami --auth`"
         exit 1
       end
-      fit = Fitbit.new
-      puts fit.weight_str
-      puts fit.fat_str
+      fit_obj = Fitbit.new
+      Howami::cli_run!(fit_obj)
     end
 
   end

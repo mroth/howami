@@ -18,7 +18,7 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes 
 
     describe "#weight_str" do
       it "returns a nicely formatted string with the proper weight" do
-        @fb.weight_str.should match(/Current weight:\t\d\d\d\.\d pounds/)
+        @fb.weight_str.should match(/\d\d\d\.\d pounds/)
       end
       it "returns a nice error message if there is no weight from past week" do
         @fb.instance_variable_set("@weights",[])
@@ -28,7 +28,7 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes 
     end
     describe "#fat_str" do
       it "returns a nicely formatted string with the current body fat" do
-        @fb.fat_str.should match(/Body fat:\t\d\d\.\d\d %/)
+        @fb.fat_str.should match(/\d\d\.\d\d %/)
       end
       it "returns a nice error message if there is no body fat measurement from past week" do
         @fb.instance_variable_set("@fats",[])
