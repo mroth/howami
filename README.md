@@ -25,7 +25,7 @@ Done.
 
 ## Usage
 
-Do `howami --auth` to complete login via the Fitbit API.  At any point after that, you can do `howami` to 
+Do `howami --auth` to complete login via the Fitbit API.  At any point after that, you can do `howami` to see your stats.
 
 ## What devices?
 
