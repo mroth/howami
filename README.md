@@ -8,11 +8,12 @@ All unix people know the `whoami` command.
 But what if you want to keep track of _how_ you are?
 
     $ howami
-    Current weight: 161.4lbs (-4% past 30 days)*
+    Current weight: 138.8 pounds (12.97 % body fat)
     Activity level: 2765 steps thus far today
-    Sleep last night: 6 hours, 14 minutes
+    Sleep last night: 5 hours, 41 min.
 
-howami uses the Fitbit API to give you a quick CLI glance at your vital stats as synchronized from your nerdy quantified-self tracking devices.
+
+`howami` uses the Fitbit API to give you a quick CLI glance at your vital stats as synchronized from your nerdy quantified-self tracking devices.
 
 ## Installation
 
@@ -24,8 +25,10 @@ Done.
 
 ## Usage
 
-TODO: Write usage instructions here
+Do `howami --auth` to complete login via the Fitbit API.  At any point after that, you can do `howami` to 
 
 ## What devices?
 
-Since people keep asking, I personally use a Fitbit Aria scale to weigh myself, and a Fitbit Flex for activity/sleep tracking.  <small>(And I've lost 22lbs. at time of writing this!)</small>
+Since people keep asking, I personally use a Fitbit Aria scale to weigh myself, and a Fitbit Flex for activity/sleep tracking.
+
+<sub>(And I've lost 22lbs. at time of writing this!)</sub>
