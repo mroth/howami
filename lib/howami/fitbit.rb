@@ -4,15 +4,18 @@ module Howami
   class Fitbit
     include Methadone::CLILogging
 
+    attr_reader :client
+
     def initialize
       @client = Authentication.authenticated_client
       retrieve_values!
     end
 
     def retrieve_values!
-      @weights = @client.data_by_time_range('/body/log/weight', {:base_date => Date.today.to_s, :period => '1w'})['weight']
-      @fats    = @client.data_by_time_range('/body/log/fat', {:base_date => Date.today.to_s, :period => '1w'})['fat']
-      @sleeps  = @client.sleep_on_date('today')
+      @weights    = @client.data_by_time_range('/body/log/weight', {:base_date => Date.today.to_s, :period => '1w'})['weight']
+      @fats       = @client.data_by_time_range('/body/log/fat', {:base_date => Date.today.to_s, :period => '1w'})['fat']
+      @sleeps     = @client.sleep_on_date('today')
+      @activities = @client.activities_on_date('today')
     end
 
     def weight_str
@@ -38,6 +41,14 @@ module Howami
       sleep_hours = sleep_total_min / 60
       sleep_remainder_min = sleep_total_min % 60
       return "#{sleep_hours} hours, #{sleep_remainder_min} min."
+    end
+
+    def steps
+      @activities['summary']['steps']
+    end
+
+    def steps_str
+      "#{self.steps} steps"
     end
 
   end

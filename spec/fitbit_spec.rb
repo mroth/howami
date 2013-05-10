@@ -35,7 +35,7 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes 
         @fb.fat_str.should match(/No body fat data recorded in past 7 days./)
       end
     end
-    
+
     describe "#sleep_str" do
       it "returns a nicely formatted string with the previous nights sleep" do
         @fb.sleep_str.should match(/\d hours, \d+ min./)
@@ -45,12 +45,19 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes 
         @fb.sleep_str.should match(/no sleep data./)
       end
     end
-    
-    describe "#step_str" do
-      it "returns a nicely formatted string with the current amount of daily steps"
-      it "returns a nice error message if there is no step data for day"
+
+    describe "#steps" do
+      it "returns the amount of steps that day as an integer" do
+        @fb.steps.should be_kind_of(Integer)
+      end
     end
-  
+
+    describe "#steps_str" do
+      it "returns a nicely formatted string with the current amount of daily steps" do
+        @fb.steps_str.should match(/\d+ steps/)
+      end
+    end
+
   end
 
 end
