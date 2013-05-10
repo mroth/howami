@@ -37,8 +37,13 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes 
     end
     
     describe "#sleep_str" do
-      it "returns a nicely formatted string with the previous nights sleep"
-      it "returns a nice error message if there is no sleep data for day"
+      it "returns a nicely formatted string with the previous nights sleep" do
+        @fb.sleep_str.should match(/\d hours, \d+ min./)
+      end
+      it "returns a nice error message if there is no sleep data for day" do
+        @fb.instance_variable_set("@sleeps", {"sleep"=>[], "summary"=>{"totalMinutesAsleep"=>0, "totalSleepRecords"=>0, "totalTimeInBed"=>0}} )
+        @fb.sleep_str.should match(/no sleep data./)
+      end
     end
     
     describe "#step_str" do

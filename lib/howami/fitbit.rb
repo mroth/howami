@@ -32,6 +32,8 @@ module Howami
     end
 
     def sleep_str
+      return "no sleep data." if @sleeps['sleep'].count == 0
+
       sleep_total_min = @sleeps['summary']['totalMinutesAsleep'].to_i
       sleep_hours = sleep_total_min / 60
       sleep_remainder_min = sleep_total_min % 60
