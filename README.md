@@ -1,4 +1,4 @@
-# Howami
+# howami ![fitbit-logo](http://f.cl.ly/items/2w0f0c0j1J1H1V171g2w/fitbit-32-blk-onwhite.jpg)
 
 All unix people know the `whoami` command.
 
