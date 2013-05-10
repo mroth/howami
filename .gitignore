@@ -3,4 +3,6 @@ results.html
 pkg
 html
 .rvmrc
+.ruby-version
 Gemfile.lock
+.bundle
