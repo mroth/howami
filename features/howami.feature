@@ -3,7 +3,7 @@ Feature: My bootstrapped app kinda works
   I want to have aruba and cucumber setup
   So I don't have to do it myself
 
-  Scenario: App just runs
+  Scenario: displaying help
     When I get help for "howami"
     Then the exit status should be 0
     And the banner should be present
@@ -14,7 +14,7 @@ Feature: My bootstrapped app kinda works
     And the banner should document that this app takes no arguments
 
   Scenario: graceful error message when not authenticated
-    # Given howami is not authenticated
+    Given howami is not authenticated
     When I run `howami`
     Then the output should contain "You need to authenticate first"
     And the exit status should be 1
