@@ -1,8 +1,21 @@
 require 'spec_helper'
 include Howami
 
-describe Fitbit, :vcr => { :cassette_name => "fitbit", :record => :new_episodes } do
+describe Fitbit, :vcr => { :cassette_name => "fitbit" } do
   #use a vcr cassette so we can assume a full populated and authenticated user record
+
+  # for testing on machines that dont have a valid condif (e.g. travis-ci)
+  # generate an invalid configuration and let us rely upon the VCR cassettes
+  # we don't use fakefs with this because it seems to screw up VCR
+  before(:all) do
+    if !File.exist? Howami::Configuration::CREDENTIALS_STORE
+      Configuration.store_credentials( 'abc', 'xyz' )
+      FAKED_CONFIG_LOL = true
+    end
+  end
+  after(:all) do
+    FileUtils.rm Howami::Configuration::CREDENTIALS_STORE if FAKED_CONFIG_LOL
+  end
 
   describe ".new" do
     it "should be instantiated without any args" do
