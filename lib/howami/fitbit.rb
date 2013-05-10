@@ -20,7 +20,7 @@ module Howami
 
     def weight_str
       if @weights.last
-        return "#{@weights.last['weight']} #{@client.label_for_measurement(:weight)}"
+        return "#{@weights.last['weight'].to_s} #{@client.label_for_measurement(:weight)}"
       else
         return "* No weight data recorded in past 7 days."
       end
