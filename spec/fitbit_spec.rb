@@ -32,6 +32,7 @@ describe Fitbit, :vcr => { :cassette_name => "fitbit" } do
 
     describe "#weight_str" do
       it "returns a nicely formatted string with the proper weight" do
+        @fb.weight_str.should be_kind_of(String)
         @fb.weight_str.should match(/\d\d\d\.\d pounds/)
       end
       it "returns a nice error message if there is no weight from past week" do
