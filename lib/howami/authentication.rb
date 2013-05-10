@@ -7,7 +7,6 @@ module Howami
 
     def initialize
       @client = Fitgem::Client.new({:consumer_key => CONSUMER_KEY, :consumer_secret => CONSUMER_SECRET})
-      # fetch_request_token!
     end
 
     def fetch_request_token!
@@ -34,13 +33,12 @@ module Howami
     end
 
     def self.authenticated_client
-      #TODO: throw error if valid creds are not stored already
       raise "No valid credentials stored!" unless Configuration.has_valid_credentials?
       @auth_client ||= Fitgem::Client.new({
-        :consumer_key => CONSUMER_KEY, 
-        :consumer_secret => CONSUMER_SECRET, 
-        :token => Configuration.get_credentials[:user_token], 
-        :secret => Configuration.get_credentials[:user_secret], 
+        :consumer_key => CONSUMER_KEY,
+        :consumer_secret => CONSUMER_SECRET,
+        :token => Configuration.get_credentials[:user_token],
+        :secret => Configuration.get_credentials[:user_secret],
         :user_id => "-"
         })
     end

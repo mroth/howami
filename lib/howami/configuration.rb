@@ -7,9 +7,6 @@ module Howami
     XDG_CONFIG_HOME = ENV['XDG_CONFIG_HOME'] || File.join(ENV['HOME'], '.config')
     CREDENTIALS_STORE = File.join( XDG_CONFIG_HOME, "howami", "credentials.yml")
 
-    # def initialize
-    # end
-
     def self.has_valid_credentials?
       self.has_stored_credentials?
     end
