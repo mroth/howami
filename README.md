@@ -14,8 +14,10 @@ But what if you want to keep track of _how_ you are?
 
 `howami` uses the Fitbit API to give you a quick CLI glance at your vital stats as synchronized from your nerdy quantified-self tracking devices.
 
+[![Gem Version](https://badge.fury.io/rb/howami.png)](http://badge.fury.io/rb/howami)
 [![Build Status](https://travis-ci.org/mroth/howami.png?branch=master)](https://travis-ci.org/mroth/howami)
 [![Dependency Status](https://gemnasium.com/mroth/howami.png)](https://gemnasium.com/mroth/howami)
+[![Code Climate](https://codeclimate.com/github/mroth/howami.png)](https://codeclimate.com/github/mroth/howami)
 
 ## Installation
 
