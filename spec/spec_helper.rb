@@ -17,8 +17,8 @@ VCR.configure do |c|
     interaction.request.headers['Authorization'].first
   end
   c.register_request_matcher :path_filter_date do |r1,r2|
-    DATE_FILTER = /\d{4}-\d{2}-\d{2}/
-    URI(r1.uri).path.gsub(DATE_FILTER, '<DATE>') == URI(r2.uri).path.gsub(DATE_FILTER, '<DATE>')
+    date_filter = /\d{4}-\d{2}-\d{2}/
+    URI(r1.uri).path.gsub(date_filter, '<DATE>') == URI(r2.uri).path.gsub(date_filter, '<DATE>')
   end
 end
 
