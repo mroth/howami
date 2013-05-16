@@ -25,6 +25,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('vcr', '~> 2.4.0')
   gem.add_development_dependency('webmock', '~> 1.9.3')
 
-  gem.add_dependency('methadone', '~> 1.2.6')
+  gem.add_dependency('methadone', '~> 1.3.0')
   gem.add_dependency('fitgem', '~> 0.6.1')
 end
