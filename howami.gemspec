@@ -27,5 +27,4 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('methadone', '~> 1.2.6')
   gem.add_dependency('fitgem', '~> 0.6.1')
-  gem.add_dependency('colored', '~> 1.2')
 end
