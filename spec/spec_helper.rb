@@ -12,9 +12,13 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
-  c.default_cassette_options = { :record => :none, :match_requests_on => [:method, :uri] }
+  c.default_cassette_options = { :record => :none, :match_requests_on => [:method, :host, :path_filter_date] }
   c.filter_sensitive_data('<OAUTH_AUTH_HEADER>') do |interaction|
     interaction.request.headers['Authorization'].first
+  end
+  c.register_request_matcher :path_filter_date do |r1,r2|
+    DATE_FILTER = /\d{4}-\d{2}-\d{2}/
+    URI(r1.uri).path.gsub(DATE_FILTER, '<DATE>') == URI(r2.uri).path.gsub(DATE_FILTER, '<DATE>')
   end
 end
 
